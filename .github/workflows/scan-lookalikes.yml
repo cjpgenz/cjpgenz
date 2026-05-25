@@ -1,0 +1,40 @@
+name: Scan Lookalike Domains
+
+on:
+  schedule:
+    # Run twice a day (Midnight & Noon UTC) to capture both overnight and daytime registrations
+    - cron: '0 0,12 * * *'
+  workflow_dispatch: # Allows manual trigger from the GitHub Actions UI
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Grants permission to commit and push changes back to the repository
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Lookalike Scanner
+        run: python scripts/scan_and_update.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Check if any monitored threat intelligence files changed
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "[*] New active threat domains detected! Committing updates..."
+            git add scripts/flagged_domains.json public/llms-full.txt
+            git commit -m "chore: auto-update active lookalike threat domains [skip ci]"
+            git push origin HEAD:${{ github.ref_name }}
+          else
+            echo "[-] No new lookalike domains resolved. Database is up to date."
+          fi
