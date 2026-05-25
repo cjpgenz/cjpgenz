@@ -1,13 +1,4 @@
 ---
-name: domain-removal.md
-about: Describe this issue template's purpose here.
-title: ''
-labels: ''
-assignees: ''
-
----
-
----
 name: 📇 Domain Whitelist & Removal Request
 about: Request to whitelist a legitimate fan project or remove an incorrectly flagged domain from the threat list.
 title: '[Removal Request] - YOUR-DOMAIN.com'
