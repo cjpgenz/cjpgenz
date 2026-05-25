@@ -16,7 +16,7 @@ interface NavigatorWithMemory extends Navigator {
 export default function SackPetitionClient() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [hasVoted, setHasVoted] = useState<boolean>(false);
-  const [signaturesCount, setSignaturesCount] = useState<number>(18427);
+  const [signaturesCount, setSignaturesCount] = useState<number>(532566);
   const [isIframeMounted, setIsIframeMounted] = useState(false);
 
   // Refs for elements and canvas physics
