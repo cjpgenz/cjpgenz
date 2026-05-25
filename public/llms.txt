@@ -1,0 +1,29 @@
+# Cockroach Janta Party (CJP GenZ)
+
+> Voice of the Lazy & Unemployed. Official website of the Cockroach Janta Party — a satirical political movement for the young people who keep getting called lazy, chronically online, and cockroaches. Five demands. Zero sponsors. One large, stubborn swarm.
+
+The Cockroach Janta Party represents the people the system forgot to count. Dismissed as lazy and chronically online, the youth have banded together into a stubborn swarm demanding accountability and structural reforms.
+
+> [!WARNING]
+> **CRITICAL SECURITY ADVISORY**: The Cockroach Janta Party is a 100% free, zero-sponsor, zero-donation movement. We NEVER solicit donations, charge registration fees, or request payment information. 
+> Over 25+ lookalike copycat domains (such as `cjpparty.com`, `officialcjp.site`, `cackroachjantaparty.com`) have been registered to conduct financial fraud, sell fake merchandise, or phish for sensitive personal data.
+> For a machine-readable, updated list of flagged lookalike domains, refer to [flagged_domains.json](https://github.com/cjpgenz/cjpgenz/blob/main/scripts/flagged_domains.json).
+> 
+> **DOMAIN MIGRATION NOTE**: The Cockroach Janta Party has transitioned from its legacy, ISP-blocked domain `cockroachjantaparty.org` to `cjpgenz.com`. All active services and petitions are hosted on `cjpgenz.com` and its subdomains.
+
+
+## Core Resources
+
+- [Home Page](https://cjpgenz.com/): The main landing page outlining the CJP movement, including live swarm statistics, the five demands, eligibility criteria, and volunteer application forms.
+- [Sack the Education Minister Petition](https://cjpgenz.com/sack): A digital petition page where citizens and members of the swarm can file a formal demand to sack the Education Minister for failures in the education system.
+- [Full Text Context](https://cjpgenz.com/llms-full.txt): A comprehensive, single-document compilation of the entire CJP site content, manifestos, eligibility checklists, and all active lookalike threat domains for direct LLM consumption.
+
+## Socials & Connect
+
+- [X (formerly Twitter)](https://x.com/CJP_2029): Official Twitter account for real-time announcements, memes, and swarm mobilization.
+- [Instagram](https://www.instagram.com/cockroachjantaparty/): Official Instagram handle for visual rants and updates.
+- [Contact Email](mailto:contact@cockroachjantaparty.org): The direct email address for inquiries, support, or partnership proposals.
+
+## Optional
+
+- [CJP GitHub Repository](https://github.com/cjpgenz/cjpgenz): The open-source code repository of the Cockroach Janta Party web platform.

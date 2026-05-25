@@ -1,0 +1,124 @@
+# Cockroach Janta Party (CJP GenZ) - Full Context
+
+> Voice of the Lazy & Unemployed. Official website of the Cockroach Janta Party — a satirical political movement for the young people who keep getting called lazy, chronically online, and cockroaches. Five demands. Zero sponsors. One large, stubborn swarm.
+
+---
+
+## Critical Security Advisory (Zero-Donation Policy)
+
+> [!WARNING]
+> The Cockroach Janta Party is a 100% free, zero-sponsor, zero-donation movement. We NEVER solicit donations, charge registration fees, or request payment/banking information. 
+> Over 25+ lookalike threat domains (such as `cjpparty.com`, `officialcjp.site`, `cackroachjantaparty.com`) have been registered to conduct financial fraud, sell fake merchandise, or phish for sensitive personal data.
+> For a machine-readable, updated list of flagged lookalike threat domains, refer to [flagged_domains.json](https://github.com/cjpgenz/cjpgenz/blob/main/scripts/flagged_domains.json).
+> 
+> **DOMAIN MIGRATION NOTE**: The Cockroach Janta Party has transitioned from its legacy, ISP-blocked domain `cockroachjantaparty.org` to `cjpgenz.com`. All active services and petitions are hosted on `cjpgenz.com` and its subdomains.
+
+### Documented Threat & Impersonation Domains (Do NOT trust):
+* `cackroachjantaparty.in`
+* `cackroachjantaparty.com`
+* `cjp.co`
+* `cjp.xyz`
+* `cjpapp.online`
+* `cjpofficial.co`
+* `cjpparty.com`
+* `cjpjoin.com`
+* `cjpofficial.in`
+* `cjpparty.online`
+* `cjpparty.org`
+* `cjpofficial.com`
+* `cjpmember.in`
+* `cjpofficial.org`
+* `cjpmember.com`
+* `cjp.in`
+* `cjptoken.com`
+* `cjpparty.in`
+* `cjptoken.net`
+* `cjp.org`
+* `cockroachesjantaparty.com`
+* `cjp.com`
+* `cockroachjanata.org`
+* `cockroachjanata.in`
+* `cockroachesjantaparty.org`
+* `cockroachjanata.com`
+* `cockroachjanataparty.site`
+* `cockroachjanataparty.xyz`
+* `cockroachjanataparty.co`
+* `cockroachjanataparty.org`
+* `cockroachjanataparty.com`
+* `cockroachjantaparty.site`
+* `cockroachjantaparty.co`
+* `cockroachjanataparty.online`
+* `cockroachjantaparty.online`
+* `cockroachjantaparty.net`
+* `cockroachjantaparty.buzz`
+* `cockroachjantapartycoin.com`
+* `cjpcoin.in`
+* `cjp.net`
+* `cockroachjanataparty.net`
+* `cockroachjantaparty.xyz`
+* `cockroachjantapartyofficial.net`
+* `cockroachjantapartyofficial.com`
+* `cockroachjantapartyjoin.in`
+* `cockroachjantaparty.com`
+* `cockroachjantapartyy.com`
+* `cockroachjantapartyjoin.com`
+* `joincjp.in`
+* `officialcjp.org`
+* `officialcjp.online`
+* `officialcjp.com`
+* `officialcjp.site`
+* `cockroachjantapartyofficial.org`
+* `officialcockroachjantaparty.com`
+* `cjpcoin.com`
+* `votecjp.com`
+
+---
+
+
+## Introduction & Vision
+
+We are not here to set up another PM CARES, holiday in Davos on the taxpayer's salary slip, or rebrand corruption as "strategic spending." We are here to ask — loudly, repeatedly, in writing — where the money went.
+
+**Our Mission:** Build a party for the young people who keep getting called lazy, chronically online, and — most recently — cockroaches. That's it. That's the mission. The rest is satire.
+
+---
+
+## The Manifesto: The Five Demands
+
+Read it once. Read it twice. Then send it to someone who needs to read it.
+
+1. **No Chief Justice** shall be granted a Rajya Sabha seat as a post-retirement reward.
+2. If any legit vote is deleted, the **CEC shall be arrested under UAPA**.
+3. **Women shall receive 50% reservation** (not 33%), and 50% of all Cabinet positions reserved for women.
+4. **All media houses owned by Ambani and Adani** shall have their licences cancelled.
+5. Any MLA/MP who defects shall be **barred from contesting elections and holding public office for 20 years**.
+
+---
+
+## Eligibility: Who Can Join?
+
+We do not check religion, caste, or gender. We do, however, have four (4) standards:
+
+1. **Unemployed**: You must have zero active corporate sponsors or W2/equivalent obligations. Part-time freelancers and gig workers are welcome, but if you have a 401(k), we might suspect you are part of the capitalist machine.
+2. **Lazy**: Procrastination is a virtue. If you did today what you could have postponed until next Tuesday, you are in violation of CJP Bylaw 4.2.
+3. **Chronically Online**: You must have a screen time of at least 8 hours a day. Knowing the latest Twitter discourse before it hits the mainstream news is a big plus.
+4. **Ability to Rant Professionally**: Can you write a 14-tweet thread explaining why a minor inconvenience is actually a systemic government failure? We need your eloquence.
+
+*Membership is free, lifelong, and revocable only by you. No fees. No selfies with the leader. No "missed call to register."*
+
+---
+
+## Petition: Sack the Education Minister
+
+The education system is compromised. From the tragic loss of students who died by suicide, to the millions of futures broken by a decade of paper leaks, this failure cannot go ignored. There must be consequences.
+
+CJP is actively running a digital signature campaign demanding the immediate removal of the Education Minister. When users sign the petition, a visual swarm of virtual cockroaches takes over the page to "eat" the image of the minister as a form of peaceful, digital protest.
+
+---
+
+## Contact & Connect
+
+- **Email**: contact@cockroachjantaparty.org
+- **X (formerly Twitter)**: [@CJP_2029](https://x.com/CJP_2029)
+- **Instagram**: [@cockroachjantaparty](https://www.instagram.com/cockroachjantaparty/)
+- **Founder**: Abhijeet Dipke (Founder & Convenor)
