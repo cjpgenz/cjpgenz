@@ -18,7 +18,7 @@ export const NAV_ITEMS = [
   { name: "Manifesto", href: "/#manifesto" },
   { name: "Eligibility", href: "/#join" },
   { name: "Contact", href: "/#contact" },
-  { name: "VOLUNTEER", href: "/#contact" },
+  { name: "VOLUNTEER", href: "/volunteer" },
 ];
 
 export const FOOTER_COLUMNS = [
@@ -35,7 +35,7 @@ export const FOOTER_COLUMNS = [
     links: [
       { name: "Eligibility", href: "/#join", external: false },
       { name: "Join the party", href: "/#contact", external: false },
-      { name: "Volunteer", href: "/#contact", external: false }
+      { name: "Volunteer", href: "/volunteer", external: false }
     ]
   },
   {
@@ -127,6 +127,14 @@ export const HERO_SLIDES: HeroSlide[] = [
   { key: "alt", src: "/banner_alt.webp", alt: "Official Poster Alternative" },
 ];
 
+export const DEFAULT_STATS = {
+  PETITION_COUNT: 619016,
+  MEMBERS_COUNT: 424887,
+  VISITORS_COUNT: 84200,
+};
+
+export const API_BASE_URL = process.env.NEXT_PUBLIC_CJP_API_URL || "https://petition.cockroachjantaparty.org";
+
 export interface StatItem {
   value: string;
   label: string;
@@ -138,8 +146,8 @@ export const STAT_ITEMS: StatItem[] = [
   { value: "0", label: "Corporate donors" },
   { value: "∞", label: "Patience" },
   { value: "1", label: "Founder, no PA" },
-  { value: "0", label: "Members", hasPulse: true },
-  { value: "0+", label: "Visitors" }
+  { value: `${DEFAULT_STATS.MEMBERS_COUNT.toLocaleString()}`, label: "Members", hasPulse: true },
+  { value: `${DEFAULT_STATS.VISITORS_COUNT.toLocaleString()}+`, label: "Visitors" }
 ];
 
 export interface ContactItem {

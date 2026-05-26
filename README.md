@@ -2,8 +2,8 @@
 
 The official open-source codebase for the **Cockroach Janta Party (CJP GenZ)** web ecosystem. 
 
-* 🌐 **Official Website:** [cjpgenz.com](https://cjpgenz.com/)
-* 📝 **Active Petition:** [petition.cjpgenz.com/sack](https://petition.cjpgenz.com/sack)
+* 🌐 **Official Website:** [cockroachjantaparty.org](https://cockroachjantaparty.org/) · [cjpgenz.com](https://cjpgenz.com/)
+* 📝 **Active Petition:** [petition.cockroachjantaparty.org](https://petition.cockroachjantaparty.org/) · [petition.cjpgenz.com/sack](https://petition.cjpgenz.com/sack)
 
 <p align="center">
   <a href="https://cjpgenz.com" target="_blank">
@@ -54,8 +54,7 @@ Embedded Google Form for joining, volunteering, or getting in touch. Contact det
 CJP is a satirical, 100% free, zero-sponsor initiative. We never solicit donations, charge registration fees, or request banking details. Any site asking for payments under our name is fraudulent.
 
 ### Official Domains
-The active official domain is **[cjpgenz.com](https://cjpgenz.com)** (and `petition.cjpgenz.com` for the petition). 
-Our original domains (`cockroachjantaparty.org` / `petition.cockroachjantaparty.org`) are legacy and currently blocked by ISPs due to censorship. They are safely excluded from our threat database but are no longer used for hosting.
+The active official domains are **[cockroachjantaparty.org](https://cockroachjantaparty.org)** and **[cjpgenz.com](https://cjpgenz.com)** (along with their subdomains `petition.cockroachjantaparty.org` and `petition.cjpgenz.com`). They are mirrored safe resources, safely excluded from our threat database, and actively used for hosting CJP platforms.
 
 ### Automated Lookalike Domain Scanner
 Due to the viral growth of the movement, threat actors have registered lookalike/typo-squatted domains to conduct financial fraud. We maintain an automated scanner script to monitor, detect, and record these malicious sites.

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback, use, Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Ticker from "@/components/Ticker";
@@ -13,10 +13,49 @@ interface NavigatorWithMemory extends Navigator {
   deviceMemory?: number;
 }
 
-export default function SackPetitionClient() {
+interface SignatureCounterProps {
+  countPromise: Promise<number>;
+  signatures: number;
+}
+
+function SignatureCounter({ countPromise, signatures }: SignatureCounterProps) {
+  const initialCount = use(countPromise);
+
+  const isBrowser = typeof window !== "undefined";
+  const cachedCountStr = isBrowser ? localStorage.getItem("sack-petition-count") : null;
+  const cachedCount = cachedCountStr ? parseInt(cachedCountStr, 10) : 0;
+
+  const totalCount = Math.max(initialCount, cachedCount) + signatures;
+
+  useEffect(() => {
+    if (isBrowser) {
+      localStorage.setItem("sack-petition-count", totalCount.toString());
+    }
+  }, [totalCount, isBrowser]);
+
+  return (
+    <p className="font-display text-[48px] sm:text-[56px] leading-none font-bold text-blood mb-2">
+      {totalCount.toLocaleString()}
+    </p>
+  );
+}
+
+function SignatureCounterFallback() {
+  return (
+    <div className="w-[140px] h-[48px] bg-paper-2 animate-pulse rounded border border-ink/10 mx-auto mb-2 flex items-center justify-center">
+      <span className="w-4 h-4 rounded-full border-2 border-blood border-t-transparent animate-spin" />
+    </div>
+  );
+}
+
+interface SackPetitionClientProps {
+  countPromise: Promise<number>;
+}
+
+export default function SackPetitionClient({ countPromise }: SackPetitionClientProps) {
   const [isAnimating, setIsAnimating] = useState(false);
   const [hasVoted, setHasVoted] = useState<boolean>(false);
-  const [signaturesCount, setSignaturesCount] = useState<number>(532566);
+  const [signatures, setSignatures] = useState<number>(0);
   const [isIframeMounted, setIsIframeMounted] = useState(false);
 
   // Refs for elements and canvas physics
@@ -33,18 +72,6 @@ export default function SackPetitionClient() {
   useEffect(() => {
     if (isBrowser) {
       window.scrollTo({ top: 0, behavior: "instant" });
-
-      // Initialize counter storage if not present
-      if (!localStorage.getItem("sack-petition-count")) {
-        localStorage.setItem("sack-petition-count", "18427");
-      } else {
-        const localCount = localStorage.getItem("sack-petition-count");
-        if (localCount) {
-          Promise.resolve().then(() => {
-            setSignaturesCount(parseInt(localCount, 10));
-          });
-        }
-      }
 
       const voted = localStorage.getItem("sack-petition-voted") === "true";
       if (voted) {
@@ -110,10 +137,10 @@ export default function SackPetitionClient() {
     // Dynamic cockroach count based on display width and device memories
     const screenWidth = window.innerWidth;
     const isLowPower = ((navigator as NavigatorWithMemory).deviceMemory || 4) <= 2;
-    const cockroachCount = screenWidth > 768 
-      ? (isLowPower ? 100 : 400) 
-      : screenWidth > 480 
-        ? (isLowPower ? 40 : 120) 
+    const cockroachCount = screenWidth > 768
+      ? (isLowPower ? 100 : 400)
+      : screenWidth > 480
+        ? (isLowPower ? 40 : 120)
         : (isLowPower ? 30 : 80);
 
     // Initialize cockroach swarms around standard screen borders
@@ -162,12 +189,12 @@ export default function SackPetitionClient() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Sizing of cockroach sprite
-      const roachSize = screenWidth > 1280 
-        ? 120 
-        : screenWidth > 1024 
-          ? 90 
-          : screenWidth > 768 
-            ? 60 
+      const roachSize = screenWidth > 1280
+        ? 120
+        : screenWidth > 1024
+          ? 90
+          : screenWidth > 768
+            ? 60
             : 40;
 
       let allScattered = true;
@@ -204,9 +231,9 @@ export default function SackPetitionClient() {
 
           // Check if roach is still visible
           if (
-            roach.x > -150 && 
-            roach.x < canvas.width + 150 && 
-            roach.y > -150 && 
+            roach.x > -150 &&
+            roach.x < canvas.width + 150 &&
+            roach.y > -150 &&
             roach.y < canvas.height + 150
           ) {
             allScattered = false;
@@ -301,7 +328,7 @@ export default function SackPetitionClient() {
         }, 80);
       } else if (now - lastTimeRef.current > 3000 && !hasSignedRef.current) {
         hasSignedRef.current = true;
-        
+
         // Scroll target to view center on mobile
         if (window.innerWidth < 1024 && imageRef.current) {
           imageRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -309,11 +336,7 @@ export default function SackPetitionClient() {
 
         const state = triggersRef.current;
         if (!state.hasVoted) {
-          setSignaturesCount((prev) => {
-            const next = prev + 1;
-            localStorage.setItem("sack-petition-count", next.toString());
-            return next;
-          });
+          setSignatures((prev) => prev + 1);
           setHasVoted(true);
           localStorage.setItem("sack-petition-voted", "true");
         }
@@ -338,9 +361,9 @@ export default function SackPetitionClient() {
 
       {/* Main Content Area */}
       <main className="min-h-[calc(100vh-200px)]">
-        <section 
-          id="sack-petition" 
-          className="relative border-b-[3px] border-ink bg-paper-2 py-[72px] lg:py-[100px] overflow-hidden" 
+        <section
+          id="sack-petition"
+          className="relative border-b-[3px] border-ink bg-paper-2 py-[72px] lg:py-[100px] overflow-hidden"
           data-screen-label="Petition"
         >
           {/* Crawl canvas overlay */}
@@ -354,7 +377,7 @@ export default function SackPetitionClient() {
           </div>
 
           <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-[56px] relative z-10 flex flex-col items-center text-center">
-            
+
             {/* Header */}
             <h1 className="font-display text-[42px] sm:text-[64px] leading-[0.9] tracking-[-0.015em] mb-[24px] text-ink">
               Petition to Sack the
@@ -371,16 +394,16 @@ export default function SackPetitionClient() {
 
             {/* Two-Column Layout */}
             <div className="flex flex-col lg:flex-row items-stretch justify-center gap-8 lg:gap-12 w-full max-w-[1100px] mx-auto">
-              
+
               {/* Column 1: Minister Image & Signature Stats */}
               <div className="w-full lg:w-[40%] flex flex-col items-center justify-center lg:sticky lg:top-[100px] lg:self-start gap-8">
-                
+
                 {/* Image Container with stamp overlay interaction */}
                 <div className="relative transition-transform duration-300">
-                  <Image 
+                  <Image
                     ref={imageRef}
-                    src="/education_minister.webp" 
-                    alt="Education Minister" 
+                    src="/education_minister.webp"
+                    alt="Education Minister"
                     width={280}
                     height={280}
                     priority
@@ -389,7 +412,7 @@ export default function SackPetitionClient() {
                     className="w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] object-contain mix-blend-multiply transition-all duration-300 ease-in-out cursor-pointer hover:scale-105"
                     style={{ opacity: 1, transform: "scale(1)" }}
                   />
-                  
+
                   <p className="font-sans text-[12px] text-ink-3 mt-2 text-center italic">
                     (Click the image to preview the sacking)
                   </p>
@@ -400,9 +423,9 @@ export default function SackPetitionClient() {
                   <p className="font-sans text-[16px] sm:text-[18px] text-ink-2 mb-[8px] font-bold">
                     Petitions signed so far
                   </p>
-                  <p className="font-display text-[48px] sm:text-[56px] leading-none font-bold text-blood mb-2">
-                    {signaturesCount.toLocaleString()}
-                  </p>
+                  <Suspense fallback={<SignatureCounterFallback />}>
+                    <SignatureCounter countPromise={countPromise} signatures={signatures} />
+                  </Suspense>
                 </div>
 
               </div>
@@ -412,17 +435,17 @@ export default function SackPetitionClient() {
                 <h3 className="font-condensed text-[24px] sm:text-[28px] font-bold tracking-wider uppercase mb-4 text-ink w-full text-start">
                   Sign the Petition
                 </h3>
-                
+
                 <div className="w-full bg-paper-2 border-2 border-ink-2 relative h-[600px] sm:h-[800px] lg:h-[961px] overflow-hidden flex items-center justify-center">
                   {isIframeMounted ? (
-                    <iframe 
+                    <iframe
                       ref={iframeRef}
-                      src="https://docs.google.com/forms/d/e/1FAIpQLSexPWW9l2FHt27Gnq_0huADzR9lXZ3undgSg03cNnMB_lhbjg/viewform?embedded=true" 
-                      width="100%" 
-                      height="100%" 
-                      frameBorder="0" 
-                      marginHeight={0} 
-                      marginWidth={0} 
+                      src="https://docs.google.com/forms/d/e/1FAIpQLSexPWW9l2FHt27Gnq_0huADzR9lXZ3undgSg03cNnMB_lhbjg/viewform?embedded=true"
+                      width="100%"
+                      height="100%"
+                      frameBorder="0"
+                      marginHeight={0}
+                      marginWidth={0}
                       className="absolute inset-0"
                     >
                       Loading…

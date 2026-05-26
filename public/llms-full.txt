@@ -10,8 +10,7 @@
 > The Cockroach Janta Party is a 100% free, zero-sponsor, zero-donation movement. We NEVER solicit donations, charge registration fees, or request payment/banking information. 
 > Over 25+ lookalike threat domains (such as `cjpparty.com`, `officialcjp.site`, `cackroachjantaparty.com`) have been registered to conduct financial fraud, sell fake merchandise, or phish for sensitive personal data.
 > For a machine-readable, updated list of flagged lookalike threat domains, refer to [flagged_domains.json](https://github.com/cjpgenz/cjpgenz/blob/main/scripts/flagged_domains.json).
-> 
-> **DOMAIN MIGRATION NOTE**: The Cockroach Janta Party has transitioned from its legacy, ISP-blocked domain `cockroachjantaparty.org` to `cjpgenz.com`. All active services and petitions are hosted on `cjpgenz.com` and its subdomains.
+> **OFFICIAL DOMAINS NOTE**: The Cockroach Janta Party is officially hosted across both of its active domains: `cockroachjantaparty.org` and `cjpgenz.com`. All services, live statistics, and petition campaigns are mirrored across both domains.
 
 ### Documented Threat & Impersonation Domains (Do NOT trust):
 * `cackroachjantaparty.in`

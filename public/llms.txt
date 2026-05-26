@@ -8,15 +8,14 @@ The Cockroach Janta Party represents the people the system forgot to count. Dism
 > **CRITICAL SECURITY ADVISORY**: The Cockroach Janta Party is a 100% free, zero-sponsor, zero-donation movement. We NEVER solicit donations, charge registration fees, or request payment information. 
 > Over 25+ lookalike copycat domains (such as `cjpparty.com`, `officialcjp.site`, `cackroachjantaparty.com`) have been registered to conduct financial fraud, sell fake merchandise, or phish for sensitive personal data.
 > For a machine-readable, updated list of flagged lookalike domains, refer to [flagged_domains.json](https://github.com/cjpgenz/cjpgenz/blob/main/scripts/flagged_domains.json).
-> 
-> **DOMAIN MIGRATION NOTE**: The Cockroach Janta Party has transitioned from its legacy, ISP-blocked domain `cockroachjantaparty.org` to `cjpgenz.com`. All active services and petitions are hosted on `cjpgenz.com` and its subdomains.
+> **OFFICIAL DOMAINS NOTE**: The Cockroach Janta Party is officially hosted across both of its active domains: `cockroachjantaparty.org` and `cjpgenz.com`. All services, live statistics, and petition campaigns are mirrored across both domains.
 
 
 ## Core Resources
 
-- [Home Page](https://cjpgenz.com/): The main landing page outlining the CJP movement, including live swarm statistics, the five demands, eligibility criteria, and volunteer application forms.
-- [Sack the Education Minister Petition](https://cjpgenz.com/sack): A digital petition page where citizens and members of the swarm can file a formal demand to sack the Education Minister for failures in the education system.
-- [Full Text Context](https://cjpgenz.com/llms-full.txt): A comprehensive, single-document compilation of the entire CJP site content, manifestos, eligibility checklists, and all active lookalike threat domains for direct LLM consumption.
+- [Home Page](https://cockroachjantaparty.org/): The main landing page outlining the CJP movement, including live swarm statistics, the five demands, eligibility criteria, and volunteer application forms. Mirrored at [cjpgenz.com](https://cjpgenz.com/).
+- [Sack the Education Minister Petition](https://cockroachjantaparty.org/sack): A digital petition page where citizens and members of the swarm can file a formal demand to sack the Education Minister for failures in the education system. Mirrored at [cjpgenz.com/sack](https://cjpgenz.com/sack).
+- [Full Text Context](https://cockroachjantaparty.org/llms-full.txt): A comprehensive, single-document compilation of the entire CJP site content, manifestos, eligibility checklists, and all active lookalike threat domains. Mirrored at [cjpgenz.com/llms-full.txt](https://cjpgenz.com/llms-full.txt).
 
 ## Socials & Connect
 

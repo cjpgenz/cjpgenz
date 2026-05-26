@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SackPetitionClient from "./SackPetitionClient";
+import { getPetitionCount } from "@/utils/api";
 
 export const metadata: Metadata = {
   title: "Petition to Sack the Education Minister",
@@ -44,5 +45,7 @@ export const metadata: Metadata = {
 };
 
 export default function SackPetitionPage() {
-  return <SackPetitionClient />;
+  const countPromise = getPetitionCount();
+
+  return <SackPetitionClient countPromise={countPromise} />;
 }

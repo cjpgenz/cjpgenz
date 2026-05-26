@@ -69,7 +69,7 @@ export default function SecurityAdvisory({ initialFlaggedDomains }: SecurityAdvi
                 <ul className="flex flex-col gap-3 font-sans text-[13.5px] text-ink-2 leading-relaxed">
                   <li className="flex gap-2.5">
                     <span className="text-blood font-bold font-mono">❶</span>
-                    <span><strong>TLD Verification:</strong> Only `cjpgenz.com` and its official subdomains (e.g., `petition.cjpgenz.com`, `www.cjpgenz.com`) are official. Ignore other lookalikes.</span>
+                    <span><strong>TLD Verification:</strong> Only official domains `cockroachjantaparty.org` and `cjpgenz.com` (and their verified subdomains like `petition.cockroachjantaparty.org` or `petition.cjpgenz.com`) are legitimate. Ignore other lookalikes.</span>
                   </li>
                   <li className="flex gap-2.5">
                     <span className="text-blood font-bold font-mono">❷</span>
