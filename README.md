@@ -107,10 +107,13 @@ pnpm start
 | ------------ | ------------------------------------------ |
 | `/`          | Main landing page with all sections        |
 | `/sack`      | Petition to sack the Education Minister    |
+| `/volunteer` | Volunteer sign-up and information           |
 
 ## Connect
 
 - **Email:** contact@cockroachjantaparty.org
-- **Twitter / X:** [@CJP_2029](https://x.com/CJP_2029)
+- **Twitter / X:** [@Cockroachisback](https://x.com/Cockroachisback)
 - **Instagram:** [@cockroachjantaparty](https://www.instagram.com/cockroachjantaparty/)
+- **Reddit:** [r/CockroachJantaParty09](https://www.reddit.com/r/CockroachJantaParty09/)
+- **Discord:** [Join Server](https://discord.gg/nm6NwGdrz)
 - **Founder:** Abhijeet Dipke (Founder & Convenor)

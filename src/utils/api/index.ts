@@ -18,7 +18,7 @@ export async function getPetitionCount(): Promise<number> {
       }
     }
   } catch (err) {
-    console.error("Failed to fetch live petition count server-side:", err);
+    // console.error("Failed to fetch live petition count server-side:", err);
   }
   return DEFAULT_STATS.PETITION_COUNT;
 }
@@ -35,7 +35,7 @@ export async function getMembersCount(): Promise<number> {
       }
     }
   } catch (err) {
-    console.error("Failed to fetch live members count server-side:", err);
+    // console.error("Failed to fetch live members count server-side:", err);
   }
   return DEFAULT_STATS.MEMBERS_COUNT;
 }
@@ -52,7 +52,7 @@ export async function getVisitorsCount(): Promise<number> {
       }
     }
   } catch (err) {
-    console.error("Failed to fetch live visitors count server-side:", err);
+    // console.error("Failed to fetch live visitors count server-side:", err);
   }
   return DEFAULT_STATS.VISITORS_COUNT;
 }

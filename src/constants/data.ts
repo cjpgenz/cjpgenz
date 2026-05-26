@@ -24,33 +24,54 @@ export const NAV_ITEMS = [
 export const FOOTER_COLUMNS = [
   {
     title: "The Party",
-    links: [
-      { name: "Vision", href: "/#vision", external: false },
-      { name: "Manifesto", href: "/#manifesto", external: false },
-      { name: "Founder", href: "/#contact", external: false }
+    sections: [
+      {
+        links: [
+          { name: "Vision", href: "/#vision", external: false },
+          { name: "Manifesto", href: "/#manifesto", external: false },
+          { name: "Founder", href: "/#contact", external: false }
+        ]
+      },
+      {
+        title: "Security & AI",
+        links: [
+          { name: "Anti-Fraud Guard", href: "/#security-advisory", external: false },
+          { name: "llms.txt", href: "/llms.txt", external: true },
+          { name: "llms-full.txt", href: "/llms-full.txt", external: true }
+        ]
+      }
     ]
   },
   {
     title: "Get involved",
-    links: [
-      { name: "Eligibility", href: "/#join", external: false },
-      { name: "Join the party", href: "/#contact", external: false },
-      { name: "Volunteer", href: "/volunteer", external: false }
+    sections: [
+      {
+        links: [
+          { name: "Eligibility", href: "/#join", external: false },
+          { name: "Join the party", href: "/#contact", external: false },
+          { name: "Volunteer", href: "/volunteer", external: false }
+        ]
+      }
     ]
   },
   {
-    title: "Follow",
-    links: [
-      { name: "Twitter / X", href: "https://x.com/CJP_2029", external: true },
-      { name: "Instagram", href: "https://www.instagram.com/cockroachjantaparty/", external: true }
-    ]
-  },
-  {
-    title: "Security & AI",
-    links: [
-      { name: "Anti-Fraud Guard", href: "/#security-advisory", external: false },
-      { name: "llms.txt", href: "/llms.txt", external: true },
-      { name: "llms-full.txt", href: "/llms-full.txt", external: true }
+    title: "CJP Handles",
+    sections: [
+      {
+        links: [
+          { name: "Twitter / X", href: "https://x.com/Cockroachisback", external: true },
+          { name: "Instagram", href: "https://www.instagram.com/cockroachjantaparty/", external: true },
+          { name: "Reddit", href: "https://www.reddit.com/r/CockroachJantaParty09/", external: true },
+          { name: "Discord", href: "https://discord.gg/nm6NwGdrz", external: true }
+        ]
+      },
+      {
+        title: "Founder",
+        links: [
+          { name: "@abhijeet_dipke", href: "https://x.com/abhijeet_dipke", external: true },
+          { name: "@abhijeetdipke", href: "https://www.instagram.com/abhijeetdipke/", external: true }
+        ]
+      }
     ]
   }
 ];
@@ -167,4 +188,3 @@ export const SITE_INFO = {
   SITE_NAME: "CJP GenZ",
   SITE_FULL_NAME: "Cockroach Janta Party (CJP GenZ)",
 };
-  

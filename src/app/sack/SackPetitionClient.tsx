@@ -370,7 +370,7 @@ export default function SackPetitionClient({ countPromise }: SackPetitionClientP
           <canvas ref={canvasRef} className="absolute inset-0 z-50 pointer-events-none" />
 
           {/* Back Button */}
-          <div className="w-max mb-10 ms-10 z-50 px-3 py-1 bg-paper-2 border-[2px] border-ink shadow-[8px_8px_0_var(--color-ink)] cursor-pointer hover:shadow-[12px_12px_0_var(--color-ink)] transition-all">
+          <div className="w-max mb-10 ms-10 z-50 px-3 py-1 bg-paper-2 border-2 border-ink shadow-[8px_8px_0_var(--color-ink)] cursor-pointer hover:shadow-[12px_12px_0_var(--color-ink)] transition-all">
             <Link href="/">
               Go Back
             </Link>
