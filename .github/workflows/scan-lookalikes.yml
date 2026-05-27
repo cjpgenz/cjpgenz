@@ -12,7 +12,7 @@ jobs:
     permissions:
       contents: write # Grants permission to commit and push changes back to the repository
       pull-requests: write
-      workflows: write
+      actions: write
 
     steps:
       - name: Checkout repository
