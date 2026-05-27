@@ -24,17 +24,11 @@ jobs:
       - name: Run Lookalike Scanner
         run: python scripts/scan_and_update.py
 
-      - name: Commit and Push changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Check if any monitored threat intelligence files changed
-          if [[ -n "$(git status --porcelain)" ]]; then
-            echo "[*] New active threat domains detected! Committing updates..."
-            git add scripts/flagged_domains.json public/llms-full.txt
-            git commit -m "chore: auto-update active lookalike threat domains [skip ci]"
-            git push origin HEAD:${{ github.ref_name }}
-          else
-            echo "[-] No new lookalike domains resolved. Database is up to date."
-          fi
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: auto-update active lookalike threat domains"
+          title: "chore: auto-update active lookalike threat domains"
+          body: "New active threat domains detected by the Lookalike Scanner."
+          branch: "auto-update-threat-domains"
