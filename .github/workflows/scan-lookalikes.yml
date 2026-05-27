@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # Grants permission to commit and push changes back to the repository
+      pull-requests: write
 
     steps:
       - name: Checkout repository
