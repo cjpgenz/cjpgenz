@@ -9,11 +9,8 @@ on:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write # Grants permission to commit and push changes back to the repository
-      pull-requests: write
-      actions: write
-
+    permissions: write-all
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -34,3 +31,4 @@ jobs:
           title: "chore: auto-update active lookalike threat domains"
           body: "New active threat domains detected by the Lookalike Scanner."
           branch: "auto-update-threat-domains"
+          auto-merge: true
