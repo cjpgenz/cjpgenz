@@ -624,6 +624,18 @@
       ]
     },
     {
+      "domain": "joincjp.org",
+      "url": "https://joincjp.org",
+      "reason": "Impersonation site actively engaged in: Financial Fraud (soliciting unsolicited movement donations). Avoid visiting to protect credentials and funds.",
+      "risk_level": "Critical",
+      "category": "Financial Fraud (soliciting unsolicited movement donations)",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests",
+        "Soliciting soliciting unsolicited movement donations"
+      ]
+    },
+    {
       "domain": "officialcjp.com",
       "url": "https://officialcjp.com",
       "reason": "Impersonation site actively engaged in: Phishing (payment/banking credential fields), Financial Fraud (soliciting unsolicited movement donations, displaying direct UPI payment links or transaction codes, charging fee for volunteer registration). Avoid visiting to protect credentials and funds.",
