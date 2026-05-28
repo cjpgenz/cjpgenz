@@ -309,6 +309,18 @@
       ]
     },
     {
+      "domain": "cjpvote.com",
+      "url": "https://cjpvote.com",
+      "reason": "Impersonation site actively engaged in: Financial Fraud (selling fake movement merchandise). Avoid visiting to protect credentials and funds.",
+      "risk_level": "Critical",
+      "category": "Financial Fraud (selling fake movement merchandise)",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests",
+        "Soliciting selling fake movement merchandise"
+      ]
+    },
+    {
       "domain": "cockroachesjantaparty.com",
       "url": "https://cockroachesjantaparty.com",
       "reason": "Active lookalike domain mimicking official CJP channels with live HTTP hosting.",
