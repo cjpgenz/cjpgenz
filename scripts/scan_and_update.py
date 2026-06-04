@@ -3,6 +3,7 @@ import os
 import re
 import socket
 import ssl
+import sys
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -15,13 +16,21 @@ LLMS_FULL_PATH = os.path.join(BASE_DIR, "public", "llms-full.txt")
 BRAND = "cockroachjantaparty"
 
 # Top-Level Domains to scan
-TLDS = ["com", "in", "site", "co", "online", "xyz", "buzz", "org", "net"]
+TLDS = [
+    "com", "in", "site", "co", "online", "xyz", "buzz", "org", "net",
+    "info", "top", "icu", "club", "shop", "live", "vip", "tech", 
+    "co.in", "net.in", "org.in"
+]
 
 # Combosquatting keywords commonly used by copycat targets
 KEYWORDS = [
     "official", "support", "card", "vote", "register", "pay", "donat",
     "join", "member", "party", "apply", "login", "portal", "token",
-    "coin", "help", "verify", "check", "app", "free", "claim"
+    "coin", "help", "verify", "check", "app", "free", "claim",
+    "india", "movement", "youth", "real", "group", "joinus", "volunteer",
+    "apk", "android", "download", "neet", "exam", "student", "news", "the",
+    "manifesto", "merch", "store", "shop", "petition", "whatsapp", "chat",
+    "community"
 ]
 
 def generate_variations(brand, keywords, tlds):
@@ -35,7 +44,7 @@ def generate_variations(brand, keywords, tlds):
         variations.add(f"{brand}.{tld}")
         variations.add(f"cjp.{tld}")
     
-    # 2. Combosquatting
+    # 2. Combosquatting (standard and hyphenated)
     for keyword in keywords:
         for tld in tlds:
             variations.add(f"{brand}{keyword}.{tld}")
@@ -43,16 +52,69 @@ def generate_variations(brand, keywords, tlds):
             variations.add(f"cjp{keyword}.{tld}")
             variations.add(f"{keyword}cjp.{tld}")
             
-    # 3. Typosquatting (Omissions, insertions, homophones)
-    typos = ["cackroachjantaparty", "cockroachjanata", "cockroachjantapartyy", "cockroachesjantaparty"]
+            variations.add(f"{brand}-{keyword}.{tld}")
+            variations.add(f"{keyword}-{brand}.{tld}")
+            variations.add(f"cjp-{keyword}.{tld}")
+            variations.add(f"{keyword}-cjp.{tld}")
+            
+    # 3. Typosquatting (Omissions, insertions, homophones, and actual spotted variants)
+    typos = [
+        "cackroachjantaparty", "cockroachjanata", "cockroachjantapartyy", 
+        "cockroachesjantaparty", "cockrochjantaparty", "cockrochjanataparty",
+        "cockroachjantparty", "cockroachjanatparty"
+    ]
     for typo in typos:
         for tld in tlds:
             variations.add(f"{typo}.{tld}")
             for keyword in keywords:
                 variations.add(f"{typo}{keyword}.{tld}")
                 variations.add(f"{keyword}{typo}.{tld}")
-                
+                variations.add(f"{typo}-{keyword}.{tld}")
+                variations.add(f"{keyword}-{typo}.{tld}")
+
+    # 4. Brand hyphenation variations
+    hyphen_brands = ["cockroach-janta-party", "cockroach-janata-party", "cockroach-janta", "cockroach-janata"]
+    for hb in hyphen_brands:
+        for tld in tlds:
+            variations.add(f"{hb}.{tld}")
+            for keyword in keywords:
+                variations.add(f"{hb}{keyword}.{tld}")
+                variations.add(f"{keyword}{hb}.{tld}")
+                variations.add(f"{hb}-{keyword}.{tld}")
+                variations.add(f"{keyword}-{hb}.{tld}")
+                 
     return sorted(list(variations))
+
+def query_dns_udp(domain):
+    """
+    Sends a raw DNS query over UDP directly to Google Public DNS (8.8.8.8) to check if a domain exists.
+    Bypasses slow OS NetBIOS/WINS resolving and avoids Cloudflare HTTP rate-limiting.
+    Returns True if the domain exists (resolves or has nameservers), False otherwise.
+    """
+    import random
+    packet = bytearray(12)
+    packet[0:2] = random.randint(0, 65535).to_bytes(2, 'big')
+    packet[2] = 1 # RD = 1 (Recursion Desired)
+    packet[5] = 1 # QDCOUNT = 1
+    for part in domain.split('.'):
+        packet.append(len(part))
+        packet.extend(part.encode('ascii', errors='ignore'))
+    packet.append(0)
+    packet.extend((1).to_bytes(2, 'big')) # QTYPE A
+    packet.extend((1).to_bytes(2, 'big')) # QCLASS IN
+    
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.settimeout(1.5)
+    try:
+        s.sendto(packet, ('8.8.8.8', 53))
+        data, addr = s.recvfrom(512)
+        rcode = data[3] & 0x0F
+        # rcode 3 means NXDOMAIN (domain does not exist)
+        # rcode 0 means NOERROR (domain is registered/resolves)
+        # rcode 2 means SERVFAIL (domain server failed, but it exists in registry)
+        return rcode == 0 or rcode == 2
+    except Exception:
+        return False
 
 def check_dns(domain):
     """
@@ -66,30 +128,19 @@ def check_dns(domain):
     reason = "Active lookalike/squatted domain resolved on the network during scanning."
     activities = ["Active DNS resolution pointing to a live IP address"]
 
-    # 1. First path: check if it resolves to an active IP locally (A-record active)
+    # 1. Fast path: check registration via direct UDP DNS query to 8.8.8.8
+    if not query_dns_udp(domain):
+        return domain, False, False, None, None, []
+
+    is_registered = True
     is_live_ip = False
-    is_registered = False
+
+    # 2. Check if it resolves to an active IP locally (A-record active)
     try:
         socket.gethostbyname(domain)
-        is_registered = True
         is_live_ip = True
     except socket.gaierror:
         pass
-
-    # 2. Second path: query Cloudflare DNS-over-HTTPS JSON API to check registration (NS record)
-    if not is_registered:
-        url = f"https://cloudflare-dns.com/dns-query?name={domain}&type=NS"
-        req = urllib.request.Request(url, headers={"Accept": "application/dns-json"})
-        context = ssl._create_unverified_context()
-        try:
-            with urllib.request.urlopen(req, context=context, timeout=5) as response:
-                data = json.loads(response.read().decode())
-                status = data.get("Status")
-                if status == 0:
-                    is_registered = True
-                    is_live_ip = False
-        except Exception:
-            pass
 
     if not is_registered:
         return domain, False, False, None, None, []
@@ -252,14 +303,19 @@ def main():
     
     newly_discovered = []
     
-    # Run DNS lookups in parallel using 50 worker threads
-    max_workers = min(50, len(domains_to_scan)) if domains_to_scan else 1
+    # Run DNS lookups in parallel using 250 worker threads for faster execution of 22k+ domains
+    max_workers = min(250, len(domains_to_scan)) if domains_to_scan else 1
     
     if domains_to_scan:
+        total = len(domains_to_scan)
+        completed = 0
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             future_to_domain = {executor.submit(check_dns, domain): domain for domain in domains_to_scan}
             
             for future in as_completed(future_to_domain):
+                completed += 1
+                if completed % 500 == 0 or completed == total:
+                    print(f"[*] Scanned {completed}/{total} domains ({(completed/total)*100:.1f}%)...")
                 domain, is_registered, is_live_ip, category, reason, activities = future.result()
                 if is_registered:
                     if is_live_ip:
