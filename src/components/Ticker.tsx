@@ -1,9 +1,14 @@
 import React from "react";
 import { TICKER_ITEMS } from "@/constants/data";
 
-export default function Ticker() {
-  // Duplicate items once to allow seamless infinite looping (10 items total)
-  const repeatedItems = [...TICKER_ITEMS, ...TICKER_ITEMS];
+interface TickerProps {
+  items?: string[];
+}
+
+export default function Ticker({ items }: TickerProps) {
+  // Duplicate items once to allow seamless infinite looping
+  const displayItems = items || TICKER_ITEMS;
+  const repeatedItems = [...displayItems, ...displayItems];
 
   return (
     <div className="bg-ink text-paper font-mono text-[11px] tracking-[0.14em] uppercase py-[9px] overflow-hidden border-b-2 border-saffron">
