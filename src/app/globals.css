@@ -148,4 +148,167 @@ html {
   animation: cjp-bounce-gentle 1.8s ease-in-out infinite;
 }
 
+/* --- 6june page styles --- */
+.container-6j { max-width: 1280px; margin: 0 auto; padding: 0 56px; }
+
+
+
+/* HERO */
+.hero {
+  border-bottom: 3px solid var(--color-ink);
+  padding: 72px 0 80px; position: relative; overflow: hidden;
+}
+.hero::after {
+  content: 'JUNE 6';
+  position: absolute; right: -40px; bottom: -80px;
+  font-family: var(--font-display); font-size: 380px;
+  color: var(--color-ink); opacity: 0.035; line-height: 1;
+  pointer-events: none; white-space: nowrap;
+}
+.hero-kicker {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--color-saffron-deep); margin-bottom: 28px;
+  padding: 7px 14px; border: 1px solid var(--color-saffron-deep); border-radius: 100px;
+}
+.live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--color-saffron-deep); animation: livepulse 1.6s ease-in-out infinite; flex-shrink: 0; }
+
+.hero-title {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(56px, 9vw, 120px);
+  line-height: 0.88; letter-spacing: -0.02em; color: var(--color-ink); margin-bottom: 28px;
+}
+.hero-title em { font-family: Georgia, serif; font-style: italic; color: var(--color-saffron-deep); }
+
+.hero-body {
+  font-size: 18px; line-height: 1.75; color: var(--color-ink-2);
+  max-width: 620px; margin-bottom: 40px;
+}
+.hero-body strong { color: var(--color-ink); }
+
+/* March plan steps */
+.march-plan {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0;
+  margin-bottom: 44px; border: 2px solid var(--color-ink);
+  background: var(--color-paper-2); max-width: 720px;
+}
+.march-step {
+  display: flex; align-items: center; gap: 14px;
+  padding: 18px 24px; flex: 1; min-width: 0;
+  border-right: 2px solid var(--color-ink);
+}
+.march-step:last-child { border-right: none; }
+.step-num {
+  font-family: var(--font-display); font-size: 28px; line-height: 1;
+  color: var(--color-saffron-deep); flex-shrink: 0;
+}
+.step-text { font-family: var(--font-condensed); font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-ink); line-height: 1.3; }
+.step-sub { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-ink-3); margin-top: 3px; }
+
+.hero-cta {
+  display: inline-block;
+  background: var(--color-saffron-deep); color: var(--color-paper);
+  font-family: var(--font-condensed); font-size: 15px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 18px 36px; border: 2px solid var(--color-ink);
+  box-shadow: 6px 6px 0 var(--color-ink); transition: all 0.15s;
+}
+.hero-cta:hover { transform: translate(3px, 3px); box-shadow: 3px 3px 0 var(--color-ink); }
+
+/* CONSTITUTION SECTION */
+.constitution {
+  background: var(--color-ink); color: var(--color-paper);
+  padding: 80px 0; border-bottom: 3px solid var(--color-saffron);
+}
+.constitution-inner { max-width: 860px; }
+.constitution-eyebrow {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--color-saffron-2); margin-bottom: 20px; display: block;
+}
+.constitution-title {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 0.9; letter-spacing: -0.02em; color: var(--color-paper);
+  margin-bottom: 32px;
+}
+.constitution-title em { font-family: Georgia, serif; font-style: italic; color: var(--color-saffron-2); }
+
+.articles { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+.article-card {
+  border: 2px solid rgba(244,235,215,0.2);
+  padding: 24px;
+}
+.article-card--highlight { border-color: var(--color-saffron); background: rgba(224,101,30,0.08); }
+.article-num {
+  font-family: var(--font-display); font-size: 42px; line-height: 1;
+  color: var(--color-saffron-2); margin-bottom: 8px;
+}
+.article-card--highlight .article-num { color: var(--color-saffron); }
+.article-title {
+  font-family: var(--font-condensed); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,235,215,0.6);
+  margin-bottom: 10px;
+}
+.article-quote {
+  font-family: Georgia, serif; font-size: 16px; font-style: italic;
+  color: var(--color-paper); line-height: 1.6;
+}
+.constitution-note {
+  font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(244,235,215,0.45); padding-top: 20px; border-top: 1px solid rgba(244,235,215,0.12);
+}
+
+/* FORM */
+.rsvp-section {
+  padding: 100px 0 120px; background: var(--color-paper); border-bottom: 2px solid var(--color-ink);
+}
+.rsvp-header { text-align: center; margin-bottom: 56px; }
+.rsvp-eyebrow {
+  font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--color-ink-3); display: block; margin-bottom: 16px;
+}
+.rsvp-title {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 0.9; letter-spacing: -0.02em; color: var(--color-ink); margin-bottom: 18px;
+}
+.rsvp-title em { font-family: Georgia, serif; font-style: italic; color: var(--color-green); }
+.rsvp-sub { font-size: 17px; line-height: 1.65; color: var(--color-ink-2); max-width: 500px; margin: 0 auto 10px; }
+.rsvp-disclaimer {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--color-ink-3);
+}
+.rsvp-frame-wrap {
+  max-width: 720px; margin: 0 auto;
+  border: 3px solid var(--color-ink); box-shadow: 10px 10px 0 var(--color-ink);
+  background: #fff; overflow: hidden;
+}
+.rsvp-frame-wrap iframe { display: block; width: 100%; border: none; }
+.rsvp-note {
+  text-align: center; margin-top: 28px;
+  font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--color-ink-3);
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .container-6j { padding: 0 32px; }
+  .articles { grid-template-columns: 1fr; }
+  .march-step { min-width: 200px; }
+}
+@media (max-width: 640px) {
+  .container-6j { padding: 0 20px; }
+  .hero { padding: 48px 0 56px; }
+  .hero::after { font-size: 160px; bottom: -40px; }
+  .march-plan { flex-direction: column; }
+  .march-step { border-right: none; border-bottom: 2px solid var(--color-ink); width: 100%; }
+  .march-step:last-child { border-bottom: none; }
+  .constitution { padding: 56px 0; }
+  .rsvp-section { padding: 64px 0 80px; }
+  .rsvp-frame-wrap { box-shadow: 5px 5px 0 var(--color-ink); }
+  .rsvp-frame-wrap iframe { height: 1800px; }
+}
+
 

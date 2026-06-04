@@ -99,22 +99,23 @@ export default function Home() {
               </a>
 
               <Link
-                href="/sack"
+                href="/6june"
                 className="bg-[#E53E3E] hover:bg-[#F55252] text-paper font-condensed tracking-widest py-[12px] px-[24px] border-2 border-ink shadow-[6px_6px_0_var(--color-ink)] transition-all duration-150 flex flex-col items-start gap-0.5 group hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0_var(--color-ink)] relative overflow-hidden"
               >
                 <div className="flex items-center gap-[8px] flex-wrap sm:flex-nowrap">
                   <span className="w-2.5 h-2.5 rounded-full bg-gold animate-livepulse shrink-0" />
-                  <span className="font-bold text-[14px] sm:text-[16px] uppercase tracking-[0.15em] text-paper leading-tight">
-                    Sack the Education Minister
+                  <span className="font-bold text-[14px] sm:text-[16px] uppercase tracking-[0.15em] text-paper leading-tight whitespace-pre-line">
+                    {/* Sack the Education Minister */}
+                    {`Join Us At Jantar Mantar\nLet's Stand Together`}
                   </span>
-                  <Suspense fallback={<SackPetitionBadgeFallback />}>
+                  {/* <Suspense fallback={<SackPetitionBadgeFallback />}>
                     <SackPetitionBadge countPromise={petitionCountPromise} />
-                  </Suspense>
+                  </Suspense> */}
                 </div>
-                <div className="font-sans text-[11px] font-medium tracking-wider text-paper/80 flex items-center gap-1.5 pl-[18px]">
+                {/* <div className="font-sans text-[11px] font-medium tracking-wider text-paper/80 flex items-center gap-1.5 pl-[18px]">
                   <span>File the petition!</span>
                   <span className="transition-transform duration-200 group-hover:translate-x-1">➔</span>
-                </div>
+                </div> */}
               </Link>
 
               <a
