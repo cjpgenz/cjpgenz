@@ -59,10 +59,14 @@ export const FOOTER_COLUMNS = [
     sections: [
       {
         links: [
-          { name: "Twitter / X", href: "https://x.com/Cockroachisback", external: true },
+          { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61590017357770", external: true },
           { name: "Instagram", href: "https://www.instagram.com/cockroachjantaparty/", external: true },
+          { name: "Twitter / X", href: "https://x.com/Cockroachisback", external: true },
+          { name: "YouTube", href: "https://www.youtube.com/@cockroachrevolution2029", external: true },
           { name: "Reddit", href: "https://www.reddit.com/r/CockroachJantaParty09/", external: true },
-          { name: "Discord", href: "https://discord.gg/nm6NwGdrz", external: true }
+          { name: "Discord", href: "https://discord.gg/cockroach", external: true },
+          { name: "WhatsApp", href: "https://whatsapp.com/channel/0029VbBqF7S5fM5Rf1mRV540", external: true },
+          { name: "Telegram", href: "https://t.me/thecockroachchannel", external: true }
         ]
       },
       {
