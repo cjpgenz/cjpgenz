@@ -40,6 +40,9 @@ A dedicated `/sack` page for filing a petition to demand accountability from the
 
 <img src="public/Cockroach%20Janta%20Party%20Petition%20to%20sack%20the%20Education%20Minister.gif" alt="Cockroach Janta Party Petition to sack the Education Minister" width="250">
 
+### Protest Roll Call — Jantar Mantar June 6
+A dedicated `/6june` page for students and volunteers to RSVP and join the peaceful, constitutional protest at Jantar Mantar.
+
 
 ### Contact
 Embedded Google Form for joining, volunteering, or getting in touch. Contact details and founder information.
@@ -108,12 +111,17 @@ pnpm start
 | `/`          | Main landing page with all sections        |
 | `/sack`      | Petition to sack the Education Minister    |
 | `/volunteer` | Volunteer sign-up and information           |
+| `/6june`     | June 6 Jantar Mantar Protest Roll Call     |
 
 ## Connect
 
 - **Email:** contact@cockroachjantaparty.org
-- **Twitter / X:** [@Cockroachisback](https://x.com/Cockroachisback)
+- **Facebook:** [Profile](https://www.facebook.com/profile.php?id=61590017357770)
 - **Instagram:** [@cockroachjantaparty](https://www.instagram.com/cockroachjantaparty/)
+- **Twitter / X:** [@Cockroachisback](https://x.com/Cockroachisback)
+- **YouTube:** [@cockroachrevolution2029](https://www.youtube.com/@cockroachrevolution2029)
 - **Reddit:** [r/CockroachJantaParty09](https://www.reddit.com/r/CockroachJantaParty09/)
-- **Discord:** [Join Server](https://discord.gg/nm6NwGdrz)
+- **Discord:** [Join Server](https://discord.gg/cockroach)
+- **WhatsApp:** [Channel](https://whatsapp.com/channel/0029VbBqF7S5fM5Rf1mRV540)
+- **Telegram:** [Channel](https://t.me/thecockroachchannel)
 - **Founder:** Abhijeet Dipke (Founder & Convenor)
