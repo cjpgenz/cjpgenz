@@ -1293,6 +1293,19 @@
       ]
     },
     {
+      "domain": "cockroachjantaparty.raizian.in",
+      "url": "https://cockroachjantaparty.raizian.in",
+      "reason": "Impersonation site actively engaged in: Phishing (unauthorized ID card / membership identity harvesting), Financial Fraud (displaying direct UPI payment links or transaction codes). Avoid visiting to protect credentials and funds.",
+      "risk_level": "Critical",
+      "category": "Phishing (unauthorized ID card / membership identity harvesting) & Financial Fraud (displaying direct UPI payment links or transaction codes)",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests",
+        "Harvesting unauthorized ID card / membership identity harvesting",
+        "Soliciting displaying direct UPI payment links or transaction codes"
+      ]
+    },
+    {
       "domain": "cockroachjantaparty.shop",
       "url": "https://cockroachjantaparty.shop",
       "reason": "Impersonation site actively engaged in: Phishing (password login forms), Financial Fraud (selling fake movement merchandise). Avoid visiting to protect credentials and funds.",
@@ -1750,6 +1763,30 @@
       "detected_activities": [
         "Registered domain with active nameservers",
         "Pre-emptively flagged for visitor safety"
+      ]
+    },
+    {
+      "domain": "idcjp.com",
+      "url": "https://idcjp.com",
+      "reason": "Impersonation site actively engaged in: Phishing (password login forms), Financial Fraud (selling fake movement merchandise). Avoid visiting to protect credentials and funds.",
+      "risk_level": "Critical",
+      "category": "Phishing (password login forms) & Financial Fraud (selling fake movement merchandise)",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests",
+        "Harvesting password login forms",
+        "Soliciting selling fake movement merchandise"
+      ]
+    },
+    {
+      "domain": "idcjp.top",
+      "url": "https://idcjp.top",
+      "reason": "Active lookalike/squatted domain resolved on the network during scanning.",
+      "risk_level": "Critical",
+      "category": "Potential Phishing & Impersonation",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests"
       ]
     },
     {
