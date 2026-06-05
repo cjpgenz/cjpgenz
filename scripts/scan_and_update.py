@@ -30,8 +30,9 @@ KEYWORDS = [
     "india", "movement", "youth", "real", "group", "joinus", "volunteer",
     "apk", "android", "download", "neet", "exam", "student", "news", "the",
     "manifesto", "merch", "store", "shop", "petition", "whatsapp", "chat",
-    "community"
+    "community", "id", "clearance", "identity", "swarm"
 ]
+
 
 def generate_variations(brand, keywords, tlds):
     """
@@ -187,6 +188,10 @@ def check_dns(domain):
                 detected_phishing.append("payment/banking credential fields")
             if "aadhaar" in html.lower() or "pan card" in html.lower():
                 detected_phishing.append("sensitive government KYC identifier inputs")
+            if "google sign-in" in html.lower() or "sign in with google" in html.lower() or "continue with google" in html.lower():
+                detected_phishing.append("unauthorized Google OAuth/credential harvesting")
+            if "id card" in html.lower() or "membership id" in html.lower() or "clearance key" in html.lower() or "swarm verification" in html.lower() or "verify your identity" in html.lower():
+                detected_phishing.append("unauthorized ID card / membership identity harvesting")
                 
             # Fraud / solicitations / unauthorized merchandise
             if "donation" in html.lower() or "donate" in html.lower() or "contribution" in html.lower():
@@ -290,14 +295,38 @@ def main():
     permutations = generate_variations(BRAND, KEYWORDS, TLDS)
     print(f"[*] Generated {len(permutations)} possible domain permutations to check.")
     
+
+    
+    # Parse command line arguments for extra target domains/subdomains to scan
+    extra_targets = []
+    for i, arg in enumerate(sys.argv):
+        if arg.startswith("--extra="):
+            extra_targets.extend(arg.split("=")[1].split(","))
+        elif arg == "--extra" and i + 1 < len(sys.argv):
+            extra_targets.extend(sys.argv[i + 1].split(","))
+
     # Filter out domains that are already exclusions or already in flagged_domains.json
     domains_to_scan = []
-    for domain in permutations:
+    
+    # 1. Add extra targets first
+    for domain in extra_targets:
+        domain = domain.strip().lower()
+        if not domain:
+            continue
         if domain in excluded_domains:
             continue
         if domain in existing_domains:
             continue
         domains_to_scan.append(domain)
+        
+    # 3. Add generated permutations
+    for domain in permutations:
+        if domain in excluded_domains:
+            continue
+        if domain in existing_domains:
+            continue
+        if domain not in domains_to_scan:
+            domains_to_scan.append(domain)
         
     print(f"[*] Scanning {len(domains_to_scan)} remaining domains concurrently (using ThreadPool)...")
     

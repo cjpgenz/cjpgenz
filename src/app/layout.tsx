@@ -27,7 +27,7 @@ const bowlbyOne = Bowlby_One({
   weight: ["400"],
 });
 
-const siteUrl = process.env.NEXT_CJP_PUBLIC_SITE_URL || "https://cjpgenz.com";
+const siteUrl = process.env.NEXT_PUBLIC_CJP_SITE_URL as string;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

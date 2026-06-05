@@ -8,6 +8,15 @@ export const metadata: Metadata = {
   title: "Are You Coming? — To Jantar Mantar · June 6",
   description:
     "Abhijeet Dipke is coming to India on June 6. Register if you're coming to Jantar Mantar to demand Dharmendra Pradhan's resignation.",
+  keywords: [
+    "Operation Show Up",
+    "Jantar Mantar Protest",
+    "Abhijeet Dipke",
+    "Dharmendra Pradhan Resignation",
+    "June 6 Delhi Protest",
+    "NEET Protest Jantar Mantar",
+    "Right to Assemble India",
+  ],
   alternates: {
     canonical: "/6june",
   },
@@ -35,8 +44,132 @@ export const metadata: Metadata = {
 };
 
 export default function June6Page() {
+  const siteUrl = process.env.NEXT_PUBLIC_CJP_SITE_URL;
+
   return (
     <div className="june6-body">
+      <script
+        type="application/ld+json"
+        id="event-schema"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "Operation Show Up — Jantar Mantar Protest",
+            "startDate": "2026-06-06T10:00:00+05:30",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "location": {
+              "@type": "Place",
+              "name": "Jantar Mantar",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Parliament Street",
+                "addressLocality": "New Delhi",
+                "addressRegion": "Delhi",
+                "postalCode": "110001",
+                "addressCountry": "IN"
+              }
+            },
+            "image": [
+              `${siteUrl}/banner.webp`
+            ],
+            "description": "Operation Show Up: A peaceful, constitutional protest demanding the resignation of Education Minister Dharmendra Pradhan. Schedule: 10:00 AM - Meet at Delhi Airport; 12:00 PM - Seek permission at Parliament Street Police Station; 2:00 PM - Protest at Jantar Mantar.",
+            "organizer": {
+              "@type": "Organization",
+              "name": "Cockroach Janta Party",
+              "url": siteUrl,
+              "logo": `${siteUrl}/icon.svg`,
+              "sameAs": [
+                "https://x.com/Cockroachisback",
+                "https://www.instagram.com/cockroachjantaparty/",
+                "https://whatsapp.com/channel/0029VbBqF7S5fM5Rf1mRV540",
+                "https://t.me/thecockroachchannel"
+              ]
+            },
+            "performer": {
+              "@type": "Person",
+              "name": "Abhijeet Dipke",
+              "jobTitle": "Founder & Convenor, Cockroach Janta Party",
+              "sameAs": [
+                "https://x.com/abhijeet_dipke",
+                "https://www.instagram.com/abhijeetdipke/"
+              ]
+            },
+            "audience": {
+              "@type": "Audience",
+              "audienceType": "Students, Youth, Volunteers"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": `${siteUrl}/6june`,
+              "price": "0",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2026-06-01T00:00:00+05:30"
+            },
+            "subEvent": [
+              {
+                "@type": "Event",
+                "name": "Delhi Airport Meetup",
+                "startDate": "2026-06-06T10:00:00+05:30",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {
+                  "@type": "Place",
+                  "name": "Indira Gandhi International Airport",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "New Delhi",
+                    "addressRegion": "Delhi",
+                    "addressCountry": "IN"
+                  }
+                },
+                "description": "Meet Abhijeet Dipke landing in Delhi."
+              },
+              {
+                "@type": "Event",
+                "name": "Protest Permission",
+                "startDate": "2026-06-06T12:00:00+05:30",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {
+                  "@type": "Place",
+                  "name": "Parliament Street Police Station",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Parliament Street",
+                    "addressLocality": "New Delhi",
+                    "addressRegion": "Delhi",
+                    "addressCountry": "IN"
+                  }
+                },
+                "description": "Seek official protest permission."
+              },
+              {
+                "@type": "Event",
+                "name": "Jantar Mantar Protest",
+                "startDate": "2026-06-06T14:00:00+05:30",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {
+                  "@type": "Place",
+                  "name": "Jantar Mantar",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Parliament Street",
+                    "addressLocality": "New Delhi",
+                    "addressRegion": "Delhi",
+                    "postalCode": "110001",
+                    "addressCountry": "IN"
+                  }
+                },
+                "description": "Demand Dharmendra Pradhan's resignation."
+              }
+            ]
+          })
+        }}
+      />
       <Ticker
         items={[
           "Operation Show Up · June 6 · Delhi",
