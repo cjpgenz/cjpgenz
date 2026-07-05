@@ -1002,6 +1002,18 @@
       ]
     },
     {
+      "domain": "cockroachjanatanews.xyz",
+      "url": "https://cockroachjanatanews.xyz",
+      "reason": "Impersonation site actively engaged in: Adware (unauthorized Google AdSense blocks). Avoid visiting to protect credentials and funds.",
+      "risk_level": "Critical",
+      "category": "Adware (unauthorized Google AdSense blocks)",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests",
+        "Injecting unauthorized Google AdSense blocks"
+      ]
+    },
+    {
       "domain": "cockroachjanataparty.club",
       "url": "https://cockroachjanataparty.club",
       "reason": "Dormant but registered lookalike typosquatting target. Pre-emptively flagged to prevent future phishing launches.",
