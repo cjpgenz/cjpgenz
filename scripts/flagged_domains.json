@@ -14,6 +14,17 @@
   },
   "flagged_domains": [
     {
+      "domain": "cackroachjantaparty-party.shop",
+      "url": "https://cackroachjantaparty-party.shop",
+      "reason": "Dormant but registered lookalike typosquatting target. Pre-emptively flagged to prevent future phishing launches.",
+      "risk_level": "Critical",
+      "category": "Dormant Squatted Threat",
+      "detected_activities": [
+        "Registered domain with active nameservers",
+        "Pre-emptively flagged for visitor safety"
+      ]
+    },
+    {
       "domain": "cackroachjantaparty-vote.site",
       "url": "https://cackroachjantaparty-vote.site",
       "reason": "Dormant but registered lookalike typosquatting target. Pre-emptively flagged to prevent future phishing launches.",
