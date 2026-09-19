@@ -71,6 +71,17 @@
       ]
     },
     {
+      "domain": "cjp-india.org",
+      "url": "https://cjp-india.org",
+      "reason": "Dormant but registered lookalike typosquatting target. Pre-emptively flagged to prevent future phishing launches.",
+      "risk_level": "Critical",
+      "category": "Dormant Squatted Threat",
+      "detected_activities": [
+        "Registered domain with active nameservers",
+        "Pre-emptively flagged for visitor safety"
+      ]
+    },
+    {
       "domain": "cjp-member.in",
       "url": "https://cjp-member.in",
       "reason": "Dormant but registered lookalike typosquatting target. Pre-emptively flagged to prevent future phishing launches.",
@@ -191,6 +202,18 @@
         "Active DNS resolution pointing to a live IP address",
         "Active HTTP server responding to secure requests",
         "Injecting unauthorized Google AdSense blocks",
+        "Soliciting selling fake movement merchandise"
+      ]
+    },
+    {
+      "domain": "cjp.net.in",
+      "url": "https://cjp.net.in",
+      "reason": "Impersonation site actively engaged in: Financial Fraud (selling fake movement merchandise). Avoid visiting to protect credentials and funds.",
+      "risk_level": "Critical",
+      "category": "Financial Fraud (selling fake movement merchandise)",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests",
         "Soliciting selling fake movement merchandise"
       ]
     },
@@ -1078,6 +1101,18 @@
       "detected_activities": [
         "Active DNS resolution pointing to a live IP address",
         "Active HTTP server responding to secure requests"
+      ]
+    },
+    {
+      "domain": "cockroachjanataparty.net.in",
+      "url": "https://cockroachjanataparty.net.in",
+      "reason": "Impersonation site actively engaged in: Financial Fraud (selling fake movement merchandise). Avoid visiting to protect credentials and funds.",
+      "risk_level": "Critical",
+      "category": "Financial Fraud (selling fake movement merchandise)",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests",
+        "Soliciting selling fake movement merchandise"
       ]
     },
     {
