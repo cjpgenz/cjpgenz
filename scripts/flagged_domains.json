@@ -71,6 +71,17 @@
       ]
     },
     {
+      "domain": "cjp-india.org",
+      "url": "https://cjp-india.org",
+      "reason": "Dormant but registered lookalike typosquatting target. Pre-emptively flagged to prevent future phishing launches.",
+      "risk_level": "Critical",
+      "category": "Dormant Squatted Threat",
+      "detected_activities": [
+        "Registered domain with active nameservers",
+        "Pre-emptively flagged for visitor safety"
+      ]
+    },
+    {
       "domain": "cjp-member.in",
       "url": "https://cjp-member.in",
       "reason": "Dormant but registered lookalike typosquatting target. Pre-emptively flagged to prevent future phishing launches.",
@@ -980,6 +991,17 @@
       ]
     },
     {
+      "domain": "cockroachjanata.shop",
+      "url": "https://cockroachjanata.shop",
+      "reason": "Active lookalike/squatted domain resolved on the network during scanning.",
+      "risk_level": "Critical",
+      "category": "Potential Phishing & Impersonation",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests"
+      ]
+    },
+    {
       "domain": "cockroachjanatanews.info",
       "url": "https://cockroachjanatanews.info",
       "reason": "Dormant but registered lookalike typosquatting target. Pre-emptively flagged to prevent future phishing launches.",
@@ -1173,6 +1195,17 @@
       ]
     },
     {
+      "domain": "cockroachjantaparty-india.org",
+      "url": "https://cockroachjantaparty-india.org",
+      "reason": "Active lookalike/squatted domain resolved on the network during scanning.",
+      "risk_level": "Critical",
+      "category": "Potential Phishing & Impersonation",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests"
+      ]
+    },
+    {
       "domain": "cockroachjantaparty.buzz",
       "url": "https://cockroachjantaparty.buzz",
       "reason": "Impersonation site actively engaged in: Adware (unauthorized Google AdSense blocks), Financial Fraud (soliciting unsolicited movement donations, displaying direct UPI payment links or transaction codes, selling fake movement merchandise). Avoid visiting to protect credentials and funds.",
@@ -1234,6 +1267,17 @@
       "detected_activities": [
         "Active DNS resolution pointing to a live IP address",
         "Active HTTP server responding to secure requests"
+      ]
+    },
+    {
+      "domain": "cockroachjantaparty.icu",
+      "url": "https://cockroachjantaparty.icu",
+      "reason": "Dormant but registered lookalike typosquatting target. Pre-emptively flagged to prevent future phishing launches.",
+      "risk_level": "Critical",
+      "category": "Dormant Squatted Threat",
+      "detected_activities": [
+        "Registered domain with active nameservers",
+        "Pre-emptively flagged for visitor safety"
       ]
     },
     {
@@ -1394,6 +1438,18 @@
       "detected_activities": [
         "Active DNS resolution pointing to a live IP address",
         "Active HTTP server responding to secure requests"
+      ]
+    },
+    {
+      "domain": "cockroachjantapartyid.com",
+      "url": "https://cockroachjantapartyid.com",
+      "reason": "Impersonation site actively engaged in: Financial Fraud (selling fake movement merchandise). Avoid visiting to protect credentials and funds.",
+      "risk_level": "Critical",
+      "category": "Financial Fraud (selling fake movement merchandise)",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests",
+        "Soliciting selling fake movement merchandise"
       ]
     },
     {
@@ -1844,6 +1900,17 @@
       "detected_activities": [
         "Registered domain with active nameservers",
         "Pre-emptively flagged for visitor safety"
+      ]
+    },
+    {
+      "domain": "joincockroachjantaparty.com",
+      "url": "https://joincockroachjantaparty.com",
+      "reason": "Active lookalike domain mimicking official CJP channels with live HTTP hosting.",
+      "risk_level": "Critical",
+      "category": "Potential Phishing & Impersonation",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests"
       ]
     },
     {
