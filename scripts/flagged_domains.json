@@ -1237,6 +1237,17 @@
       ]
     },
     {
+      "domain": "cockroachjantaparty.icu",
+      "url": "https://cockroachjantaparty.icu",
+      "reason": "Dormant but registered lookalike typosquatting target. Pre-emptively flagged to prevent future phishing launches.",
+      "risk_level": "Critical",
+      "category": "Dormant Squatted Threat",
+      "detected_activities": [
+        "Registered domain with active nameservers",
+        "Pre-emptively flagged for visitor safety"
+      ]
+    },
+    {
       "domain": "cockroachjantaparty.info",
       "url": "https://cockroachjantaparty.info",
       "reason": "Impersonation site actively engaged in: Financial Fraud (selling fake movement merchandise). Avoid visiting to protect credentials and funds.",
@@ -1394,6 +1405,18 @@
       "detected_activities": [
         "Active DNS resolution pointing to a live IP address",
         "Active HTTP server responding to secure requests"
+      ]
+    },
+    {
+      "domain": "cockroachjantapartyid.com",
+      "url": "https://cockroachjantapartyid.com",
+      "reason": "Impersonation site actively engaged in: Financial Fraud (selling fake movement merchandise). Avoid visiting to protect credentials and funds.",
+      "risk_level": "Critical",
+      "category": "Financial Fraud (selling fake movement merchandise)",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests",
+        "Soliciting selling fake movement merchandise"
       ]
     },
     {
