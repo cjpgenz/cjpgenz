@@ -357,6 +357,17 @@
       ]
     },
     {
+      "domain": "cjpindia.net",
+      "url": "https://cjpindia.net",
+      "reason": "Active lookalike domain mimicking official CJP channels with live HTTP hosting.",
+      "risk_level": "Critical",
+      "category": "Potential Phishing & Impersonation",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests"
+      ]
+    },
+    {
       "domain": "cjpindia.online",
       "url": "https://cjpindia.online",
       "reason": "Active lookalike domain mimicking official CJP channels with live HTTP hosting.",
