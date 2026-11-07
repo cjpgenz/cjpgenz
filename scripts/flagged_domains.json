@@ -60,6 +60,17 @@
       ]
     },
     {
+      "domain": "chat-cockroach-janta-party.vip",
+      "url": "https://chat-cockroach-janta-party.vip",
+      "reason": "Dormant but registered lookalike typosquatting target. Pre-emptively flagged to prevent future phishing launches.",
+      "risk_level": "Critical",
+      "category": "Dormant Squatted Threat",
+      "detected_activities": [
+        "Registered domain with active nameservers",
+        "Pre-emptively flagged for visitor safety"
+      ]
+    },
+    {
       "domain": "cjp-group.com",
       "url": "https://cjp-group.com",
       "reason": "Dormant but registered lookalike typosquatting target. Pre-emptively flagged to prevent future phishing launches.",
