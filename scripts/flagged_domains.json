@@ -195,6 +195,18 @@
       ]
     },
     {
+      "domain": "cjp.net.in",
+      "url": "https://cjp.net.in",
+      "reason": "Impersonation site actively engaged in: Financial Fraud (selling fake movement merchandise). Avoid visiting to protect credentials and funds.",
+      "risk_level": "Critical",
+      "category": "Financial Fraud (selling fake movement merchandise)",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests",
+        "Soliciting selling fake movement merchandise"
+      ]
+    },
+    {
       "domain": "cjp.org",
       "url": "https://cjp.org",
       "reason": "Impersonation site actively engaged in: Financial Fraud (soliciting unsolicited movement donations, displaying direct UPI payment links or transaction codes). Avoid visiting to protect credentials and funds.",
@@ -357,6 +369,17 @@
       ]
     },
     {
+      "domain": "cjpindia.net",
+      "url": "https://cjpindia.net",
+      "reason": "Active lookalike domain mimicking official CJP channels with live HTTP hosting.",
+      "risk_level": "Critical",
+      "category": "Potential Phishing & Impersonation",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests"
+      ]
+    },
+    {
       "domain": "cjpindia.online",
       "url": "https://cjpindia.online",
       "reason": "Active lookalike domain mimicking official CJP channels with live HTTP hosting.",
@@ -412,6 +435,17 @@
         "Active DNS resolution pointing to a live IP address",
         "Active HTTP server responding to secure requests",
         "Harvesting password login forms"
+      ]
+    },
+    {
+      "domain": "cjpmember.co.in",
+      "url": "https://cjpmember.co.in",
+      "reason": "Active lookalike domain mimicking official CJP channels with live HTTP hosting.",
+      "risk_level": "Critical",
+      "category": "Potential Phishing & Impersonation",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests"
       ]
     },
     {
@@ -526,6 +560,28 @@
       "detected_activities": [
         "Registered domain with active nameservers",
         "Pre-emptively flagged for visitor safety"
+      ]
+    },
+    {
+      "domain": "cjpnews.info",
+      "url": "https://cjpnews.info",
+      "reason": "Active lookalike/squatted domain resolved on the network during scanning.",
+      "risk_level": "Critical",
+      "category": "Potential Phishing & Impersonation",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests"
+      ]
+    },
+    {
+      "domain": "cjpnews.live",
+      "url": "https://cjpnews.live",
+      "reason": "Active lookalike domain mimicking official CJP channels with live HTTP hosting.",
+      "risk_level": "Critical",
+      "category": "Potential Phishing & Impersonation",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests"
       ]
     },
     {
@@ -653,6 +709,17 @@
       ]
     },
     {
+      "domain": "cjpparty.site",
+      "url": "https://cjpparty.site",
+      "reason": "Active lookalike/squatted domain resolved on the network during scanning.",
+      "risk_level": "Critical",
+      "category": "Potential Phishing & Impersonation",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests"
+      ]
+    },
+    {
       "domain": "cjpshop.com",
       "url": "https://cjpshop.com",
       "reason": "Dormant but registered lookalike typosquatting target. Pre-emptively flagged to prevent future phishing launches.",
@@ -694,6 +761,17 @@
       "detected_activities": [
         "Registered domain with active nameservers",
         "Pre-emptively flagged for visitor safety"
+      ]
+    },
+    {
+      "domain": "cjpsupport.com",
+      "url": "https://cjpsupport.com",
+      "reason": "Active lookalike domain mimicking official CJP channels with live HTTP hosting.",
+      "risk_level": "Critical",
+      "category": "Potential Phishing & Impersonation",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests"
       ]
     },
     {
@@ -1173,6 +1251,17 @@
       ]
     },
     {
+      "domain": "cockroachjantaparty-india.org",
+      "url": "https://cockroachjantaparty-india.org",
+      "reason": "Active lookalike/squatted domain resolved on the network during scanning.",
+      "risk_level": "Critical",
+      "category": "Potential Phishing & Impersonation",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests"
+      ]
+    },
+    {
       "domain": "cockroachjantaparty.buzz",
       "url": "https://cockroachjantaparty.buzz",
       "reason": "Impersonation site actively engaged in: Adware (unauthorized Google AdSense blocks), Financial Fraud (soliciting unsolicited movement donations, displaying direct UPI payment links or transaction codes, selling fake movement merchandise). Avoid visiting to protect credentials and funds.",
@@ -1394,6 +1483,18 @@
       "detected_activities": [
         "Active DNS resolution pointing to a live IP address",
         "Active HTTP server responding to secure requests"
+      ]
+    },
+    {
+      "domain": "cockroachjantapartyid.com",
+      "url": "https://cockroachjantapartyid.com",
+      "reason": "Impersonation site actively engaged in: Financial Fraud (selling fake movement merchandise). Avoid visiting to protect credentials and funds.",
+      "risk_level": "Critical",
+      "category": "Financial Fraud (selling fake movement merchandise)",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests",
+        "Soliciting selling fake movement merchandise"
       ]
     },
     {
@@ -1847,6 +1948,17 @@
       ]
     },
     {
+      "domain": "joincockroachjantaparty.com",
+      "url": "https://joincockroachjantaparty.com",
+      "reason": "Active lookalike domain mimicking official CJP channels with live HTTP hosting.",
+      "risk_level": "Critical",
+      "category": "Potential Phishing & Impersonation",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests"
+      ]
+    },
+    {
       "domain": "officialcjp.com",
       "url": "https://officialcjp.com",
       "reason": "Impersonation site actively engaged in: Phishing (payment/banking credential fields), Financial Fraud (soliciting unsolicited movement donations, displaying direct UPI payment links or transaction codes, charging fee for volunteer registration). Avoid visiting to protect credentials and funds.",
@@ -1946,6 +2058,22 @@
         "Active HTTP server responding to secure requests",
         "Harvesting password login forms",
         "Soliciting selling fake movement merchandise"
+      ]
+    },
+    {
+      "domain": "supportcjp.com",
+      "url": "https://supportcjp.com",
+      "reason": "Impersonation site actively engaged in: Phishing (payment/banking credential fields, unauthorized ID card / membership identity harvesting), Financial Fraud (soliciting unsolicited movement donations, selling fake movement merchandise, charging fee for volunteer registration). Avoid visiting to protect credentials and funds.",
+      "risk_level": "Critical",
+      "category": "Phishing (payment/banking credential fields, unauthorized ID card / membership identity harvesting) & Financial Fraud (soliciting unsolicited movement donations, selling fake movement merchandise, charging fee for volunteer registration)",
+      "detected_activities": [
+        "Active DNS resolution pointing to a live IP address",
+        "Active HTTP server responding to secure requests",
+        "Harvesting payment/banking credential fields",
+        "Harvesting unauthorized ID card / membership identity harvesting",
+        "Soliciting soliciting unsolicited movement donations",
+        "Soliciting selling fake movement merchandise",
+        "Soliciting charging fee for volunteer registration"
       ]
     },
     {
