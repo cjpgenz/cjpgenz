@@ -13,6 +13,19 @@
 > **OFFICIAL DOMAINS NOTE**: The Cockroach Janta Party is officially hosted across both of its active domains: `cockroachjantaparty.org` and `cjpgenz.com`. All services, live statistics, and petition campaigns are mirrored across both domains.
 
 ### Documented Threat & Impersonation Domains (Do NOT trust):
+* `cjpnews.info`
+* `cjpparty.site`
+* `cjpmember.co.in`
+* `cjpsupport.com`
+* `cjpnews.live`
+* `cjpindia.net`
+* `cockroachesjantapartycoin.info`
+* `cockroachjanata.shop`
+* `cockroachjanataparty.net.in`
+* `cockroachjantaparty-india.org`
+* `cockroachjantaparty.icu`
+* `cockroachjantapartyid.com`
+* `joincockroachjantaparty.com`
 * `cockroachjanatanews.xyz`
 * `cockroachjantaparty.raizian.in`
 * `idcjp.com`
